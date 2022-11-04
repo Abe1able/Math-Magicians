@@ -51,6 +51,11 @@ Feel free to check the [issues page](https://github.com/Abe1able/Math-Magicians/
 
 Give a ⭐️ if you like this project!
 
+## Acknowledgments
+
+- Microverse 
+- A great thanks to My coding partners morning session team, and standup team for their contributions.
+
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
