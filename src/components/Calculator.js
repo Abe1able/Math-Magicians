@@ -1,58 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Calculator = () => {
+  const [stateObject, setStateObject] = useState({ total: '0' });
 
-  onClickHandler = (e) => {
-    const result = calculate(this.state, e.target.innerHTML);
-    this.setState(result);
+  const onClickHandler = (e) => {
+    const result = calculate(stateObject, e.target.innerHTML);
+    setStateObject(result);
   };
 
-  render() {
-    const { next, total } = this.state;
-    return (
-      <div className="container">
-        <div className="row-div">
-          <div className="result">
-            { next ?? total ?? 0 }
-          </div>
-        </div>
-        <div className="row-div">
-          <button type="button" className="cell" onClick={this.onClickHandler}>AC</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>+/-</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>%</button>
-          <button type="button" className="orange-cell" onClick={this.onClickHandler}>&#247;</button>
-        </div>
-        <div className="row-div">
-          <button type="button" className="cell" onClick={this.onClickHandler}>7</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>8</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>9</button>
-          <button type="button" className="orange-cell" onClick={this.onClickHandler}>x</button>
-        </div>
-        <div className="row-div">
-          <button type="button" className="cell" onClick={this.onClickHandler}>4</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>5</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>6</button>
-          <button type="button" className="orange-cell" onClick={this.onClickHandler}>-</button>
-        </div>
-        <div className="row-div">
-          <button type="button" className="cell" onClick={this.onClickHandler}>1</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>2</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>3</button>
-          <button type="button" className="orange-cell" onClick={this.onClickHandler}>+</button>
-        </div>
-        <div className="row-div">
-          <button type="button" className="zero-cell" onClick={this.onClickHandler}>0</button>
-          <button type="button" className="cell" onClick={this.onClickHandler}>.</button>
-          <button type="button" className="orange-cell" onClick={this.onClickHandler}>=</button>
+  return (
+    <div className="container">
+      <div className="row-div">
+        <div className="result">
+          { stateObject.total }
+          { stateObject.operation }
+          { stateObject.next }
         </div>
       </div>
-    );
-  }
-}
+      <div className="row-div">
+        <button type="button" className="cell" onClick={onClickHandler}>AC</button>
+        <button type="button" className="cell" onClick={onClickHandler}>+/-</button>
+        <button type="button" className="cell" onClick={onClickHandler}>%</button>
+        <button type="button" className="orange-cell" onClick={onClickHandler}>&#247;</button>
+      </div>
+      <div className="row-div">
+        <button type="button" className="cell" onClick={onClickHandler}>7</button>
+        <button type="button" className="cell" onClick={onClickHandler}>8</button>
+        <button type="button" className="cell" onClick={onClickHandler}>9</button>
+        <button type="button" className="orange-cell" onClick={onClickHandler}>x</button>
+      </div>
+      <div className="row-div">
+        <button type="button" className="cell" onClick={onClickHandler}>4</button>
+        <button type="button" className="cell" onClick={onClickHandler}>5</button>
+        <button type="button" className="cell" onClick={onClickHandler}>6</button>
+        <button type="button" className="orange-cell" onClick={onClickHandler}>-</button>
+      </div>
+      <div className="row-div">
+        <button type="button" className="cell" onClick={onClickHandler}>1</button>
+        <button type="button" className="cell" onClick={onClickHandler}>2</button>
+        <button type="button" className="cell" onClick={onClickHandler}>3</button>
+        <button type="button" className="orange-cell" onClick={onClickHandler}>+</button>
+      </div>
+      <div className="row-div">
+        <button type="button" className="zero-cell" onClick={onClickHandler}>0</button>
+        <button type="button" className="cell" onClick={onClickHandler}>.</button>
+        <button type="button" className="orange-cell" onClick={onClickHandler}>=</button>
+      </div>
+    </div>
+  );
+};
 
 export default Calculator;
