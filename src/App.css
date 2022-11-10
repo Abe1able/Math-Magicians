@@ -3,9 +3,13 @@ body {
   background-image: linear-gradient(90deg, #ffdee9 0%, #b5fffc 100%);
 }
 
+.main_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .container {
   width: 420px;
-  padding-left: 50px;
 }
 
 .row-div {
