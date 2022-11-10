@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  font-size: 1.5em;
+}
+
+nav h2 {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 500;
+  margin: 0;
+  padding-left: 60px;
+}
+
+.nav_link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_link li {
+  padding: 0 1em;
+  list-style: none;
+}
+
+.nav_link li a {
+  text-decoration: none;
+  color: #f5913e;
+}
+
+.nav_link li a:hover {
+  color: #8286fc;
+}
+
+.active_link {
+  color: #fff !important;
+}

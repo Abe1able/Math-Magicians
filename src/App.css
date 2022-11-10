@@ -1,11 +1,11 @@
 body {
-  display: flex;
-  justify-content: center;
-  padding-top: 200px;
+  background-color: #FFDEE9;
+  background-image: linear-gradient(90deg, #FFDEE9 0%, #B5FFFC 100%);
 }
 
 .container {
   width: 420px;
+  padding-left: 50px;
 }
 
 .row-div {
