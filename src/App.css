@@ -1,7 +1,11 @@
 body {
+  background-color: #ffdee9;
+  background-image: linear-gradient(90deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+.main_container {
   display: flex;
-  justify-content: center;
-  padding-top: 200px;
+  justify-content: space-evenly;
 }
 
 .container {
